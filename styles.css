@@ -4,7 +4,7 @@ body{
 #sketch{
     display: flex;
     flex-wrap: wrap;
-   
+   box-shadow: 10px 10px;
     margin: 10px auto;
 }
 
