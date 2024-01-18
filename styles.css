@@ -1,0 +1,13 @@
+body{
+    background-color: aqua;
+}
+#sketch{
+    display: flex;
+    flex-wrap: wrap;
+   
+    margin: 10px auto;
+}
+
+.cell{
+border:1px solid black;
+}
