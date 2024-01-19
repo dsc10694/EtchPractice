@@ -2,7 +2,7 @@ const gridesize = 600
 let squarePerSide = 16
 const sketchArea = document.getElementById('sketch');
 const cellContainer = document.createElement('div')
-
+const noButton = document.querySelector('.noButton')
 const button = document.querySelector('.reset')
 
 
@@ -38,6 +38,24 @@ for (i=0; i<totalsqure; i++){
     
 }
 
+function changeSquareSize() {
+    let userInput;
+    let noSquares;
+   
+    userInput = prompt('What is the number of squares that you want on axis?');
+    noSquares = parseInt(userInput);
+    if (isNaN(noSquares)|| (noSquares>100) || (noSquares<=0)) {
+        alert ('Invalid input. Please enter a valid number between from 1 to 100');
+    }
+    else{
+        squarePerSide = noSquares
+       const gridesize =600;
+        sketchArea.innerHTML ='';
+        createGrid();
+    }
+    
+}
 
+noButton.addEventListener('click',changeSquareSize)
 createGrid()
 
